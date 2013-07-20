@@ -8,6 +8,17 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap
+ *= require bootstrap-responsive
+ *= require font-awesome.min
+ *= require refineslide.css
+ *= require refineslide-theme-dark
+ *= require social
+ *= require flexslider
+ *= require pricing
+ *= require faq
+ *= require prettyPhoto
+ *= require google-code-prettify/prettify.css
+ *= require style
  *= require_self
- *= require_tree .
  */

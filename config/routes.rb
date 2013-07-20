@@ -1,4 +1,40 @@
 Verso::Application.routes.draw do
+
+  resource :portfolio, only: [] do
+    collection do
+      get 'two_column'
+      get 'three_column'
+      get 'four_column'
+      get 'single'
+      get 'video'
+      get 'alternative_slider'
+    end
+  end
+
+  get 'pricing' => 'pricings#index'
+
+  resources :pages, only: [] do
+    collection do
+      get 'about_us'
+      get 'contact_us'
+      get 'team'
+      get 'features'
+      get 'components'
+      get 'sitemap'
+    end
+  end
+
+  resource :blog, only: [] do
+    collection do
+      get 'single'
+      get 'category'
+      get 'category_alternative'
+      get 'pinterest'
+    end
+  end
+
+  root to: 'pages#home'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

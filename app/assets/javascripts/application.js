@@ -10,7 +10,24 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require jquery-1.7.1.min
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+// require jquery.turbolinks
+// require turbolinks
+//= require google-code-prettify/prettify
+//= require bootstrap
+//= require jquery.easing
+//= require jquery.transit.min
+//= require jquery.fitvids.min
+//= require jquery.waitforimages
+//= require jquery.prettyPhoto
+//= require jquery.cslider
+//= require jquery.accordion
+//= require superfish
+//= require jquery.ui.totop
+//= require custom
+//= require jquery.mousewheel
+//= require jquery.flexslider-min
+//= require ios-orientation-change-fix
+//= require respond.min
+
