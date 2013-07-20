@@ -2,7 +2,7 @@
 
 class BlogsController < ApplicationController
   def single
-    raise ActionController::RoutingError.new "msg"
+
   end
 
   def category

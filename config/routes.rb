@@ -21,6 +21,7 @@ Verso::Application.routes.draw do
       get 'features'
       get 'components'
       get 'sitemap'
+      get 'error_404'
     end
   end
 

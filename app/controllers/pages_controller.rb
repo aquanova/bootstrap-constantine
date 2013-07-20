@@ -28,4 +28,9 @@ class PagesController < ApplicationController
   def sitemap
 
   end
+
+  def error_404
+    render 'error_404', layout: 'alternative'
+  end
+
 end
