@@ -7,10 +7,10 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="">
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all" %>
 
   <!--[if lt IE 7]>
-  <link href="assets/css/font-awesome-ie7.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag 'verso/font-awesome-ie7.min.css' %>
   <![endif]-->
 
   <%= yield :stylesheets %>
@@ -24,10 +24,10 @@
 
   <%= favicon_link_tag %>
 
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="/assets/apple-touch-icon-57-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/verso/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/verso/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/verso/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/verso/apple-touch-icon-57-precomposed.png">
 
   <%= csrf_meta_tags %>
 </head>
@@ -82,9 +82,9 @@
 <!-- Le javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "application" %>
 
-<%= yield :script %>
+<%= yield :scripts %>
 
 </body>
 </html>

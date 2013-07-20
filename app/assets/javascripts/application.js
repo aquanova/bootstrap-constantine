@@ -10,24 +10,22 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery-1.7.1.min
+//= require verso/jquery-1.7.1.min
 //= require jquery_ujs
-// require jquery.turbolinks
-// require turbolinks
-//= require google-code-prettify/prettify
-//= require bootstrap
-//= require jquery.easing
-//= require jquery.transit.min
-//= require jquery.fitvids.min
-//= require jquery.waitforimages
-//= require jquery.prettyPhoto
-//= require jquery.cslider
-//= require jquery.accordion
-//= require superfish
-//= require jquery.ui.totop
-//= require custom
-//= require jquery.mousewheel
-//= require jquery.flexslider-min
-//= require ios-orientation-change-fix
-//= require respond.min
+//= require verso/google-code-prettify/prettify
+//= require verso/bootstrap
+//= require verso/jquery.easing
+//= require verso/jquery.transit.min
+//= require verso/jquery.fitvids.min
+//= require verso/jquery.waitforimages
+//= require verso/jquery.prettyPhoto
+//= require verso/jquery.cslider
+//= require verso/jquery.accordion
+//= require verso/superfish
+//= require verso/jquery.ui.totop
+//= require verso/custom
+//= require verso/jquery.mousewheel
+//= require verso/jquery.flexslider-min
+//= require verso/ios-orientation-change-fix
+//= require verso/respond.min
 

@@ -34,6 +34,24 @@ Verso::Application.routes.draw do
     end
   end
 
+  resource :admin, only: [] do
+    collection do
+      get 'sign_in'
+      get 'dashboard'
+      get 'tables'
+      get 'elements'
+      get 'media'
+      get 'forms'
+      get 'grid'
+      get 'buttons'
+      get 'notification'
+      get 'calendar'
+      get 'chat'
+      get 'charts'
+      get 'profile'
+    end
+  end
+
   root to: 'pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.

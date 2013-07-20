@@ -8,17 +8,17 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap
- *= require bootstrap-responsive
- *= require font-awesome.min
- *= require refineslide.css
- *= require refineslide-theme-dark
- *= require social
- *= require flexslider
- *= require pricing
- *= require faq
- *= require prettyPhoto
- *= require google-code-prettify/prettify.css
- *= require style
+ *= require verso/bootstrap
+ *= require verso/bootstrap-responsive
+ *= require verso/font-awesome.min
+ *= require verso/refineslide.css
+ *= require verso/refineslide-theme-dark
+ *= require verso/social
+ *= require verso/flexslider
+ *= require verso/pricing
+ *= require verso/faq
+ *= require verso/prettyPhoto
+ *= require verso/google-code-prettify/prettify.css
+ *= require verso/style
  *= require_self
  */

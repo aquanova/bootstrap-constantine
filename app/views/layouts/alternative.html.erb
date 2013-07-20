@@ -7,18 +7,18 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="author" content="">
-  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag "application", media: "all" %>
 
   <!--[if lt IE 7]>
-  <link href="assets/css/font-awesome-ie7.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag "verso/font-awesome-ie7.min.css" %>
   <![endif]-->
 
   <%= yield :stylesheets %>
   <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Patua+One' %>
 
-  <%= stylesheet_link_tag "parallax_slider/style.css" %>
+  <%= stylesheet_link_tag "verso/parallax_slider/style.css" %>
   <noscript>
-    <%= stylesheet_link_tag "parallax_slider/nojs.css" %>
+    <%= stylesheet_link_tag "verso/parallax_slider/nojs.css" %>
   </noscript>
 
   <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -106,8 +106,8 @@
 <!-- Le javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<%= javascript_include_tag 'modernizr.custom.28468.js' %>
-<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+<%= javascript_include_tag 'verso/modernizr.custom.79639.js' %>
+<%= javascript_include_tag "application" %>
 
 <!-- SLIDER -->
 <script type="text/javascript">
@@ -174,7 +174,7 @@
 
 </script>
 
-<%= yield :script %>
+<%= yield :scripts %>
 
 </body>
 </html>
