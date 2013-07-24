@@ -1,10 +1,6 @@
-class AdminsController < ApplicationController
+class AdminPagesController < ApplicationController
 
   layout 'admin'
-
-  def sign_in
-    render layout: false
-  end
 
   def dashboard
 
