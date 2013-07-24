@@ -36,4 +36,7 @@ gem 'apipie-rails', '~> 0.0.22'
 
 group :development do
   gem 'sextant'
+  gem 'meta_request'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end

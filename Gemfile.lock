@@ -33,11 +33,18 @@ GEM
     arel (3.0.2)
     attr_required (0.0.5)
     bcrypt-ruby (3.1.1-x86-mingw32)
+    better_errors (0.9.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     builder (3.0.4)
+    callsite (0.0.11)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
+    coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -46,6 +53,7 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     columnize (0.3.6)
+    debug_inspector (0.0.2)
     debugger (1.6.0)
       columnize (>= 0.3.1)
       debugger-linecache (~> 1.2.0)
@@ -76,6 +84,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_request (0.2.6)
+      callsite
+      rack-contrib
+      railties
     mime-types (1.23)
     multi_json (1.7.7)
     mysql2 (0.3.11)
@@ -90,6 +102,8 @@ GEM
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-oauth2 (1.0.5)
       activesupport (>= 2.3)
       attr_required (>= 0.0.5)
@@ -147,11 +161,14 @@ PLATFORMS
 
 DEPENDENCIES
   apipie-rails (~> 0.0.22)
+  better_errors
+  binding_of_caller
   coffee-rails (~> 3.2.1)
   debugger
   devise (~> 2.2.4)
   fb_graph (~> 2.7.7)
   jquery-rails (= 2.0.1)
+  meta_request
   mysql2
   paperclip (~> 3.0)
   rails (= 3.2.13)

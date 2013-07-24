@@ -117,7 +117,7 @@
                       <div class="modal-body">
                         <div class="row-fluid">
                           <div class="span3">
-                            <img src="<%= current_user.avatar.url %>" alt="" class="thumbnail span12">
+                            <img src="<%= current_user.avatar.url(:medium) %>" alt="" class="thumbnail span12">
                           </div>
                           <div class="span9">
                             <a href="#"><i class="icon-cogs"></i> Settings Account</a>
@@ -153,7 +153,7 @@
 <div class="span2">
   <div class="row-fluid">
     <div class="span6">
-      <img src="<%= current_user.avatar.url %>" alt="" class="span12 thumbnail">
+      <img src="<%= current_user.avatar.url(:medium) %>" alt="" class="span12 thumbnail">
     </div>
     <div class="span6">
       <h6>username</h6>
@@ -178,6 +178,13 @@
             <div class="accordion-heading">
               <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= edit_user_registration_path %>">
                 <span> Personal Info</span>
+              </a>
+            </div>
+          </div>
+          <div class="accordion-group">
+            <div class="accordion-heading">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= user_cars_path current_user %>">
+                <span> Cars</span>
               </a>
             </div>
           </div>
@@ -262,6 +269,12 @@
     <li class="active">Data</li>
   </ul>
 </div>
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-#{key}">
+    <strong>value</strong>
+  </div>
+<% end %>
 
 <%= yield %>
 
