@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Verso::Application.config.secret_token = 'e2fc421887926b9c5adabef09e54334a41215f7fd287ad7499db9d820341056bab2813d365c9bb7a99d708b3b9f69dfbce80cab579bdde1258a4c0b9967336f4'
+Verso::Application.config.secret_token = '5ed589f9c0f07d784a51888538a4102d2212870777a68e5a8e9f2d5c2d60e2ed2dd8bd254ebd146ad1d47af69ea80fafc846ab13749c752daf9a1f45614d533f'

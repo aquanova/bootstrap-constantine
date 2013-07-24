@@ -117,7 +117,7 @@
                       <div class="modal-body">
                         <div class="row-fluid">
                           <div class="span3">
-                            <img src="/assets/resource/img/defaultPhoto.png" alt="" class="thumbnail span12">
+                            <img src="<%= current_user.avatar.url %>" alt="" class="thumbnail span12">
                           </div>
                           <div class="span9">
                             <a href="#"><i class="icon-cogs"></i> Settings Account</a>
@@ -128,7 +128,9 @@
                       </div>
                       <div class="modal-footer">
 
-                        <button href="#" class="btn btn-primary"><i class="icon-off"></i> Log Out</button>
+                        <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-primary', style: 'color: #fff; text-decoration: none' do %>
+                          <i class="icon-off"></i> Log Out
+                        <% end %>
                       </div>
                     </div>
 
@@ -151,11 +153,11 @@
 <div class="span2">
   <div class="row-fluid">
     <div class="span6">
-      <img src="/assets/resource/img/160x120.gif" alt="" class="span12 thumbnail">
+      <img src="<%= current_user.avatar.url %>" alt="" class="span12 thumbnail">
     </div>
     <div class="span6">
       <h6>username</h6>
-      <a href="#">Profile</a>|<a href="<%= sign_in_admin_path %>">Logout</a>
+      <%= link_to 'Profile', edit_user_registration_path %> | <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
     </div>
   </div>
   <br>
@@ -167,102 +169,85 @@
         <div class="accordion" id="accordian2">
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn btn-danger" href="<%= dashboard_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn btn-danger" href="<%= dashboard_admin_pages_path %>">
                 <i class="icon-home icon-white"></i><span> Dashboard</span>
               </a>
             </div>
-
           </div>
-
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= tables_admin_path %>">
-                <i class="icon-list-alt"></i><span> Tables</span>
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= edit_user_registration_path %>">
+                <span> Personal Info</span>
               </a>
             </div>
-
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= elements_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= elements_admin_pages_path %>">
                 <i class="icon-tasks"></i><span> Elements</span>
               </a>
             </div>
-
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= media_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= media_admin_pages_path %>">
                 <i class="icon-picture"></i><span> Media</span>
               </a>
             </div>
-
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= forms_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= forms_admin_pages_path %>">
                 <i class="icon-align-center"></i><span> Forms</span>
               </a>
             </div>
-
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= grid_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= grid_admin_pages_path %>">
                 <i class="icon-indent-left"></i><span> Grid</span>
               </a>
             </div>
-
           </div>
 
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= buttons_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= buttons_admin_pages_path %>">
                 <i class="icon-gift"></i><span> Buttons </span>
               </a>
             </div>
-
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= notification_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= notification_admin_pages_path %>">
                 <i class="icon-info-sign"></i><span> Notification</span>
               </a>
             </div>
-
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= calendar_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= calendar_admin_pages_path %>">
                 <i class="icon-calendar"></i><span> Callendar</span>
               </a>
             </div>
-
           </div>
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= chat_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= chat_admin_pages_path %>">
                 <i class="icon-comment"></i><span> Chat</span>
               </a>
             </div>
-
           </div>
 
           <div class="accordion-group">
             <div class="accordion-heading">
-              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= charts_admin_path %>">
+              <a style="text-decoration: none;text-align: left" class="accordion-toggle btn" href="<%= charts_admin_pages_path %>">
                 <i class="icon-bar-chart"></i><span> Charts</span>
               </a>
             </div>
-
           </div>
-
-
-
         </div>
-
       </li>
-
     </ul>
   </div>
   <!--/.well -->
