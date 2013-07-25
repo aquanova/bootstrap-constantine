@@ -40,6 +40,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
     callsite (0.0.11)
+    cancan (1.6.10)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -163,6 +164,7 @@ DEPENDENCIES
   apipie-rails (~> 0.0.22)
   better_errors
   binding_of_caller
+  cancan (~> 1.6.10)
   coffee-rails (~> 3.2.1)
   debugger
   devise (~> 2.2.4)
