@@ -271,8 +271,8 @@
 </div>
 
 <% flash.each do |key, value| %>
-  <div class="alert alert-#{key}">
-    <strong>value</strong>
+  <div class="alert alert-<%= key %>">
+    <strong><%= value %></strong>
   </div>
 <% end %>
 
