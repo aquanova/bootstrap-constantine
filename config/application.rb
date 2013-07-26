@@ -68,7 +68,15 @@ module Verso
       Devise::UnlocksController.layout "admin"
       Devise::PasswordsController.layout "admin"
     end
-    
+
+    # Devise wraps invalid fields with a .field-with-error div. It makes form elements jump to the next line
+    # This setting will output the invalid input as is. It won't highlight it in any way. I don't see an easy solution
+    # to this (aside from using simple_form or formtastic), since bootstrap requires .error class be added to the
+    # .control-group and not the input itself
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance|
+      "#{html_tag}".html_safe
+    }
+
     config.action_mailer.smtp_settings = {
       :address              => "smtp.gmail.com",
       :port                 => 587,
