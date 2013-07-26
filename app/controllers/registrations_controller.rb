@@ -36,6 +36,6 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     def after_sign_up_path_for(resource)
-      root_url
+      dashboard_admin_pages_path
     end
 end
