@@ -112,7 +112,7 @@
                     <div style="width: 314px">
                       <div class="modal-header">
 
-                        <h3>Username - Administrator</h3>
+                        <h3><%= "#{current_user.firstname} #{current_user.lastname} - #{current_user.role}"%></h3>
                       </div>
                       <div class="modal-body">
                         <div class="row-fluid">
@@ -156,7 +156,7 @@
       <img src="<%= current_user.avatar.url(:medium) %>" alt="" class="span12 thumbnail">
     </div>
     <div class="span6">
-      <h6>username</h6>
+      <h6><%= "#{current_user.firstname} #{current_user.lastname}"%></h6>
       <%= link_to 'Profile', edit_user_registration_path %> | <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
     </div>
   </div>
