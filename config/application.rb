@@ -63,7 +63,7 @@ module Verso
       DeviseController.respond_to :html, :json
 
       Devise::SessionsController.layout 'admin_unregistered'
-      Devise::RegistrationsController.layout Proc.new { |c| c.action_name == 'new' ? 'admin_unregistered' : 'admin' }
+      Devise::RegistrationsController.layout Proc.new { |c| c.action_name == 'new' || 'create' ? 'admin_unregistered' : 'admin' }
       Devise::ConfirmationsController.layout "admin"
       Devise::UnlocksController.layout "admin"
       Devise::PasswordsController.layout "admin"
