@@ -56,26 +56,31 @@
                 </ul>
               </li>
 
-              <li class="dropdown sfHover"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in</a>
-
-                <ul class="dropdown-menu">
-                  <li>
-                    <div style="padding: 15px; padding-bottom: 0px;">
-                      <form method="post" action="login" accept-charset="UTF-8">
-                        <input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
-                        <input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
-                        <input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
-                        <label class="string optional" for="sign-in"> Remember me</label>
-                        <input class="btn btn-info btn-block" type="submit" id="sign-in" value="Sign In">
-                        <label style="text-align:center;margin-top:5px">or</label>
-                        <input class="btn btn-primary btn-block" type="button" id="sign-in-google" value="Sign In with Google">
-                        <input class="btn btn-primary btn-block" type="button" id="sign-in-twitter" value="Sign In with Twitter">
-                      </form>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-
+              <% if current_user %>
+                <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li class="dropdown sfHover"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Sign in</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div style="padding: 15px;">
+                        <%= form_for resource, as: resource_name, url: session_path(resource_name), html: { style: 'margin-bottom: 0' } do |f| %>
+                          <%= f.email_field :email, autofocus: true, class: 'span2', placeholder: 'Email address', style: 'margin-bottom: 15px;' %>
+                          <%= f.password_field :password, class: 'span2', placeholder: 'Password', style: 'margin-bottom: 15px;' %>
+                          <% if devise_mapping.rememberable? -%>
+                            <%= f.check_box :remember_me, style: 'float: left; margin-right: 10px; margin-bottom: 15px' %>
+                            <%= f.label :remember_me, class: 'string optional' %>
+                          <% end -%>
+                          <%= f.submit 'Sign In', class: 'btn btn-info btn-block', style: 'margin-bottom: 15px;' %>
+                          <%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
+                            <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+                          <% end -%>
+                        <% end %>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="<%= new_user_registration_path %>">Sign Up</a></li>
+              <% end %>
             </ul>
           </div>
         </div>
