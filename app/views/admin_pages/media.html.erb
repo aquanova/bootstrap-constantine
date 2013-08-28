@@ -1,7 +1,7 @@
 <div class="accordion" id="accordionMedia1">
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a style="text-align: left;text-decoration: none" class="accordion-toggle btn btn-danger"
+      <a style="text-align: left;text-decoration: none" class="accordion-toggle btn btn-primary"
          data-toggle="collapse" data-parent="#accordion2" href="#collapseMedia1">
         <i class="icon-list-alt"></i>  Image Gallery <i class="icon-minus pull-right"></i>
       </a>
@@ -54,7 +54,7 @@
 <div class="accordion" id="accordionMedia2">
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a style="text-align: left;text-decoration: none" class="accordion-toggle btn btn-danger"
+      <a style="text-align: left;text-decoration: none" class="accordion-toggle btn btn-primary"
          data-toggle="collapse" data-parent="#accordion2" href="#collapseMedia2">
         <i class="icon-list-alt"></i> File Upload <i class="icon-minus pull-right"></i>
       </a>
@@ -82,7 +82,7 @@
                   <i class="icon-ban-circle icon-white"></i>
                   <span>Cancel upload</span>
                 </button>
-                <button type="button" class="btn btn-danger delete">
+                <button type="button" class="btn btn-primary delete">
                   <i class="icon-trash icon-white"></i>
                   <span>Delete</span>
                 </button>
@@ -157,7 +157,7 @@
             <td colspan="2"></td>
             {% } %}
             <td class="delete">
-              <button class="btn btn-danger" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
+              <button class="btn btn-primary" data-type="{%=file.delete_type%}" data-url="{%=file.delete_url%}">
                 <i class="icon-trash icon-white"></i>
                 <span>{%=locale.fileupload.destroy%}</span>
               </button>

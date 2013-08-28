@@ -6,8 +6,7 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-
-gem 'rake', '10.1.0'
+gem 'rake'
 gem 'fb_graph', '~> 2.7.7'
 
 # Gems used only for assets and not required
@@ -35,9 +34,9 @@ gem 'apipie-rails', '~> 0.0.22'
 
 #gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
-group :development do
-  gem 'sextant'
-  gem 'meta_request'
-  gem 'better_errors'
-  gem 'binding_of_caller'
-end
+#group :development do
+#  gem 'sextant'
+#  gem 'meta_request'
+#  gem 'better_errors'
+#  gem 'binding_of_caller'
+#end
